@@ -152,29 +152,31 @@ function checkForAnswer() {
 	}
 
 	//checking if checked radio button is same as answer
-	options.forEach((option) => {
-		if (option.checked === true && option.value === currentQuestionAnswer) {
-			document.getElementById(correctOption).style.backgroundColor = "green"
-			playerScore++ //adding to player's score
-			indexNumber++ //adding 1 to index so has to display next question..
-			//set to delay question number till when next question loads
-			setTimeout(() => {
-				questionNumber++
-			}, 1000)
-		}
+	// {options.forEach((option) => {
+	// 	if (option.checked === true && option.value === currentQuestionAnswer) {
+	// 		document.getElementById(correctOption).style.backgroundColor = "green"
+	// 		playerScore++ //adding to player's score
+	// 		indexNumber++ //adding 1 to index so has to display next question..
+	// 		//set to delay question number till when next question loads
+	// 		setTimeout(() => {
+	// 			questionNumber++
+	// 		}, 1000)
+	// 	}
 
-		else if (option.checked && option.value !== currentQuestionAnswer) {
-			const wrongLabelId = option.labels[0].id
+	// 	else if (option.checked && option.value !== currentQuestionAnswer) {
+	// 		const wrongLabelId = option.labels[0].id
 
-			document.getElementById(correctOption).style.backgroundColor = "green"
-			// wrongAttempt++ //adds 1 to wrong attempts
-			indexNumber++
-			//set to delay question number till when next question loads
-			setTimeout(() => {
-				questionNumber++
-			}, 1000)
-		}
-	})
+	// 		document.getElementById(correctOption).style.backgroundColor = "green"
+	// 		// wrongAttempt++ //adds 1 to wrong attempts
+	// 		indexNumber++
+	// 		//set to delay question number till when next question loads
+	// 		setTimeout(() => {
+	// 			questionNumber++
+	// 		}, 1000)
+	// 	}
+	// })}
+
+	
 }
 
 
