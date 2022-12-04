@@ -2,92 +2,92 @@ questions = [
 
 	{
 	    question: "Do you show zero interest in physical exercises?",
-	    optionA: "always",
-	    optionB: "mostly",
-	    optionC: "sometimes",
-	    optionD: "no",
-	    correctOption: "optionD"
+	    optionA: {text:"always",pointsforopt:0,correct:false},
+	    optionB: {text:"mostly",pointsforopt:1,correct:false},
+	    optionC: {text:"sometimes",pointsforopt:2,correct:false},
+	    optionD: {text:"no",pointsforopt:3,correct:true},
+	    // correctOption: "optionD"
 	},
     
 	{
 	   question: "Do you get some suicidal thoughts?",
-	   optionA: "always",
-	   optionB: "mostly",
-	   optionC: "sometimes",
-	   optionD: "no",
-	   correctOption: "optionD"
+	   optionA: {text:"always",pointsforopt:0,correct:false},
+	   optionB: {text:"mostly",pointsforopt:1,correct:false},
+	   optionC: {text:"sometimes",pointsforopt:2,correct:false},
+	   optionD: {text:"no",pointsforopt:3,correct:true},
+	//    correctOption: "optionD"
 	},
     
 	{
 	  question: "Do you face some anxiety and depression related issues?",
-	  optionA: "always",
-	  optionB: "mostly",
-	  optionC: "sometimes",
-	  optionD: "no",
-	  correctOption: "optionD"
+	  optionA: {text:"always",pointsforopt:0,correct:false},
+	  optionB: {text:"mostly",pointsforopt:1,correct:false},
+	  optionC: {text:"sometimes",pointsforopt:2,correct:false},
+	  optionD: {text:"no",pointsforopt:3,correct:true},
+	//   correctOption: "optionD"
 	},
     
 	{
 	  question: "Can you able to sleep at night?",
-	  optionA: "always",
-	  optionB: "mostly",
-	  optionC: "sometimes",
-	  optionD: "no",
-	  correctOption: "optionA"
+	  optionA: {text:"always",pointsforopt:3,correct:true},
+	  optionB: {text:"mostly",pointsforopt:2,correct:false},
+	  optionC: {text:"sometimes",pointsforopt:1,correct:false},
+	  optionD: {text:"no",pointsforopt:0,correct:false},
+	//   correctOption: "optionA"
 	},
     
 	{
 	  question: "Do you overthink face some inferiority complex issues and having difficulties in daily activities ?",
-	  optionA: "always",
-	  optionB: "mostly",
-	  optionC: "sometimes",
-	  optionD: "no",
-	  correctOption: "optionD"
+	  optionA: {text:"always",pointsforopt:0,correct:false},
+	  optionB: {text:"mostly",pointsforopt:1,correct:false},
+	  optionC: {text:"sometimes",pointsforopt:2,correct:false},
+	  optionD: {text:"no",pointsforopt:3,correct:true},
+	//   correctOption: "optionD"
 	},
     
 	{
 	  question: "Do you get Overwhelming feelings of helplessness or hopelessness ?",
-    optionA: "always",
-    optionB: "mostly",
-    optionC: "sometimes",
-    optionD: "no",
-    correctOption: "optionD"
+    optionA: {text:"always",pointsforopt:0,correct:false},
+    optionB: {text:"mostly",pointsforopt:1,correct:false},
+    optionC: {text:"sometimes",pointsforopt:2,correct:false},
+    optionD: {text:"no",pointsforopt:3,correct:true},
+    // correctOption: "optionD"
 	},
     
 	{
 	  question: "Do you have migraine issues?",
-	    optionA: "always",
-	    optionB: "mostly",
-	    optionC: "sometimes",
-	    optionD: "no",
-	    correctOption: "optionD"
+	    optionA: {text:"always",pointsforopt:0,correct:false},
+	    optionB: {text:"mostly",pointsforopt:1,correct:false},
+	    optionC: {text:"sometimes",pointsforopt:2,correct:false},
+	    optionD: {text:"no",pointsforopt:3,correct:true},
+	    // correctOption: "optionD"
 	},
     
 	{
 	  question: "Do you face impaired consciousness?",
-	  optionA: "always",
-	  optionB: "mostly",
-	  optionC: "sometimes",
-	  optionD: "no",
-	  correctOption: "optionD"
+	  optionA: {text:"always",pointsforopt:0,correct:false},
+	  optionB: {text:"mostly",pointsforopt:1,correct:false},
+	  optionC: {text:"sometimes",pointsforopt:2,correct:false},
+	  optionD: {text:"no",pointsforopt:3,correct:true},
+	//   correctOption: "optionD"
 	},
     
 	{
 	  question: "Do you feel laziness and weakness?",
-	  optionA: "always",
-	  optionB: "mostly",
-	  optionC: "sometimes",
-	  optionD: "no",
-	  correctOption: "optionD"
+	  optionA: {text:"always",pointsforopt:0,correct:false},
+	  optionB: {text:"mostly",pointsforopt:1,correct:false},
+	  optionC: {text:"sometimes",pointsforopt:2,correct:false},
+	  optionD: {text:"no",pointsforopt:3,correct:true},
+	//   correctOption: "optionD"
 	},
     
 	{
 	  question: "Do you face any discomfort while doing physical exercises?",
-	  optionA: "always",
-	  optionB: "mostly",
-	  optionC: "sometimes",
-	  optionD: "no",
-	  correctOption: "optionD"
+	  optionA: {text:"always",pointsforopt:0,correct:false},
+	  optionB: {text:"mostly",pointsforopt:1,correct:false},
+	  optionC: {text:"sometimes",pointsforopt:2,correct:false},
+	  optionD: {text:"no",pointsforopt:3,correct:true},
+	//   correctOption: "optionD"
 	}
     
     ]
