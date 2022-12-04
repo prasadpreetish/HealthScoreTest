@@ -28,7 +28,7 @@ questions = [
 	},
 
 	{
-		question: "Can you able to sleep at night?",
+		question: "Are you able to sleep at night?",
 		optionA: { text: "always", pointsforopt: 3, correct: true },
 		optionB: { text: "mostly", pointsforopt: 2, correct: false },
 		optionC: { text: "sometimes", pointsforopt: 1, correct: false },
@@ -135,9 +135,13 @@ function NextQuestion(index) {
 
 function checkForAnswer() {
 	const currentQuestion = shuffledQuestions[indexNumber] //gets current Question
-	const currentQuestionAnswer = currentQuestion.correctOption //gets current Question's answer
+	// const currentQuestionAnswer = currentQuestion.correctOption //gets current Question's answer
 	const options = document.getElementsByName("option"); //gets all elements in dom with name of 'option' (in this the radio inputs)
+
 	let correctOption = null
+
+	let optedAnswer = null;
+	let currentQuestionAnswer = null;
 
 	options.forEach((option) => {
 		if (option.value === currentQuestionAnswer) {
@@ -151,32 +155,47 @@ function checkForAnswer() {
 		document.getElementById('option-modal').style.display = "flex"
 	}
 
-	//checking if checked radio button is same as answer
-	// {options.forEach((option) => {
-	// 	if (option.checked === true && option.value === currentQuestionAnswer) {
-	// 		document.getElementById(correctOption).style.backgroundColor = "green"
-	// 		playerScore++ //adding to player's score
-	// 		indexNumber++ //adding 1 to index so has to display next question..
-	// 		//set to delay question number till when next question loads
-	// 		setTimeout(() => {
-	// 			questionNumber++
-	// 		}, 1000)
-	// 	}
+	// getting the currentQuestion correct answer and also checking the same here;
 
-	// 	else if (option.checked && option.value !== currentQuestionAnswer) {
-	// 		const wrongLabelId = option.labels[0].id
 
-	// 		document.getElementById(correctOption).style.backgroundColor = "green"
-	// 		// wrongAttempt++ //adds 1 to wrong attempts
-	// 		indexNumber++
-	// 		//set to delay question number till when next question loads
-	// 		setTimeout(() => {
-	// 			questionNumber++
-	// 		}, 1000)
-	// 	}
-	// })}
-
-	
+	if (options[0].checked) {
+		currentQuestionAnswer = currentQuestion.optionA.correct;
+		// document.getElementById(correctOption).style.backgroundColor = "green"
+		playerScore += currentQuestion.optionA.pointsforopt;
+		indexNumber++;
+		//set to delay question number till when next question loads
+		setTimeout(() => {
+			questionNumber++
+		}, 1000)
+	} else if (options[1].checked) {
+		currentQuestionAnswer = currentQuestion.optionB.correct;
+		// document.getElementById(correctOption).style.backgroundColor = "green"
+		playerScore += currentQuestion.optionB.pointsforopt;
+		indexNumber++;
+		//set to delay question number till when next question loads
+		setTimeout(() => {
+			questionNumber++
+		}, 1000)
+	} else if (options[2].checked) {
+		currentQuestionAnswer = currentQuestion.optionC.correct;
+		// document.getElementById(correctOption).style.backgroundColor = "green"
+		playerScore += currentQuestion.optionC.pointsforopt;
+		indexNumber++;
+		//set to delay question number till when next question loads
+		setTimeout(() => {
+			questionNumber++
+		}, 1000)
+	} else if (options[3].checked) {
+		currentQuestionAnswer = currentQuestion.optionD.correct;
+		// document.getElementById(correctOption).style.backgroundColor = "green"
+		playerScore += currentQuestion.optionD.pointsforopt;
+		indexNumber++;
+		//set to delay question number till when next question loads
+		setTimeout(() => {
+			questionNumber++
+		}, 1000)
+	}
+	console.log(playerScore)
 }
 
 
@@ -216,33 +235,33 @@ function unCheckRadioButtons() {
 
 // function for when all questions being answered
 function handleEndGame() {
-	let remark = null
+	let remark = "";
 	let remarkColor = null
 
 	// condition check for player remark and remark color
 	if (playerScore <= 2) {
-		remark = "you are dealing with a serious mental health issues <br> Refer to Dr.Sachin Mishra(neurologist) <br> Contact : 8237327653 <br> Refer to Dr. Lakshit Singh(pyschiatrist) <br> Contact:7842672763"
+		remark += "you are dealing with a serious mental health issues <br> Refer to Dr.Sachin Mishra(neurologist) <br> Contact : 8237327653 <br> Refer to Dr. Lakshit Singh(pyschiatrist) <br> Contact:7842672763"
 		remarkColor = "red"
 	}
 	else if (playerScore >= 3 && playerScore < 6) {
-		remark = "you are dealing with a mild  mental health issues <br> Refer to Dr.Alok Mishra(psychologist) <br> Contact : 8237327653 <br> Refer to Dr. Lakshit Singh(pyschiatrist) <br> Contact:7842672763"
+		remark += "you are dealing with a mild  mental health issues <br> Refer to Dr.Alok Mishra(psychologist) <br> Contact : 8237327653 <br> Refer to Dr. Lakshit Singh(pyschiatrist) <br> Contact:7842672763"
 		remarkColor = "orange"
 	}
 	else if (playerScore >= 6 && playerScore < 9) {
-		remark = "you are dealing with a normal mental health issues <br> Refer to Dr.Mahesh Singh(psychologist) <br> Contact : 8237327653"
+		remark += "you are dealing with a normal mental health issues <br> Refer to Dr.Mahesh Singh(psychologist) <br> Contact : 8237327653"
 		remarkColor = "yellow"
 	}
 	else if (playerScore >= 9) {
-		remark = "your total health score is good <br> Refer to Dr. Arun Gupta(physician)"
+		remark += "your total health score is good <br> Refer to Dr. Arun Gupta(physician)"
 		remarkColor = "green"
 	}
-	const playerGrade = (playerScore / 10) * 100
+	const playerGrade = (playerScore / 30) * 100
 
 	//data to display to score board
 	document.getElementById('remarks').innerHTML = remark
 	document.getElementById('remarks').style.color = remarkColor
 	document.getElementById('grade-percentage').innerHTML = playerGrade
-	document.getElementById('wrong-answers').innerHTML = wrongAttempt
+	// document.getElementById('wrong-answers').innerHTML = wrongAttempt no need now as there is no wrong answer.
 	document.getElementById('right-answers').innerHTML = playerScore
 	document.getElementById('score-modal').style.display = "flex"
 
